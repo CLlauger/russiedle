@@ -12,14 +12,13 @@ import { InfosPl } from "./components/panels/InfosPl";
 import { InfosDe } from "./components/panels/InfosDe";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
-import { Worldle } from "./components/Worldle";
 import { Stats } from "./components/panels/Stats";
 import { Twemoji } from "@teuteuf/react-emoji-render";
 import { getDayString, useTodays } from "./hooks/useTodays";
 import { InfosJa } from "./components/panels/InfosJa";
 
 const supportLink: Record<string, string> = {
-  UA: "https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1",
+  UA: "https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1"
 };
 
 export default function App() {
@@ -108,7 +107,7 @@ export default function App() {
               <Twemoji text="❓" />
             </button>
             <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Wor<span className="text-green-600">l</span>dle
+              <span className="text-green-600">Russi</span>edle
             </h1>
             <button
               className="ml-3 text-xl"
@@ -126,37 +125,6 @@ export default function App() {
             </button>
           </header>
           <Game settingsData={settingsData} updateSettings={updateSettings} />
-          <footer className="flex justify-center items-center mt-8 mb-4">
-            <Twemoji
-              text="❤️"
-              className="flex items-center justify-center mr-1"
-            />{" "}
-            <Worldle />? -
-            {country && supportLink[country.code] != null ? (
-              <a
-                className="underline pl-1"
-                href={supportLink[country.code]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="w-max">{t(`support.${country.code}`)}</div>
-              </a>
-            ) : (
-              <a
-                className="underline pl-1"
-                href="https://www.ko-fi.com/teuteuf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="w-max">
-                  <Twemoji
-                    text={t("buyMeACoffee")}
-                    options={{ className: "inline-block" }}
-                  />
-                </div>
-              </a>
-            )}
-          </footer>
         </div>
       </div>
     </>

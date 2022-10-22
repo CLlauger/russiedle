@@ -37,8 +37,8 @@ export function Settings({
               updateSettings({ distanceUnit: e.target.value as "km" | "miles" })
             }
           >
-            <option value="km">KM</option>
-            <option value="miles">Miles</option>
+            <option value="km">{t("settings.km")}</option>
+            <option value="miles">{t("settings.miles")}</option>
           </select>
           <label
             className="flex-1 ml-2 flex items-center"
@@ -56,8 +56,8 @@ export function Settings({
               updateSettings({ theme: e.target.value as "light" | "dark" })
             }
           >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
+            <option value="light">{t("settings.light")}</option>
+            <option value="dark">{t("settings.dark")}</option>
           </select>
           <label
             className="flex-1 ml-2 flex items-center"

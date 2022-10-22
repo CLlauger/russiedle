@@ -5,14 +5,8 @@
 
 import { areas } from "./countries.area";
 import { countries } from "./countries.position";
-import { corsicanCountryNames } from "./countries.name.co";
-import { frenchCountryNames } from "./countries.name.fr";
-import { hungarianCountryNames } from "./countries.name.hu";
-import { dutchCountryNames } from "./countries.name.nl";
-import { polishCountryNames } from "./countries.name.pl";
-import { germanCountryNames } from "./countries.name.de";
+import { catalanCountryNames } from "./countries.name.ca";
 import { countryCodesWithImage } from "./countries.image";
-import { japaneseCountryNames } from "./countries.name.ja";
 
 export interface Country {
   code: string;
@@ -22,7 +16,7 @@ export interface Country {
 }
 
 export const countriesWithImage = countries.filter((c) =>
-  countryCodesWithImage.includes(c.code.toLowerCase())
+  countryCodesWithImage.includes(c.code.toUpperCase())
 );
 
 export const smallCountryLimit = 5000;
@@ -32,20 +26,8 @@ export const bigEnoughCountriesWithImage = countriesWithImage.filter(
 
 export function getCountryName(language: string, country: Country) {
   switch (language) {
-    case "co":
-      return corsicanCountryNames[country.code];
-    case "fr":
-      return frenchCountryNames[country.code];
-    case "hu":
-      return hungarianCountryNames[country.code];
-    case "nl":
-      return dutchCountryNames[country.code];
-    case "pl":
-      return polishCountryNames[country.code];
-    case "de":
-      return germanCountryNames[country.code];
-    case "ja":
-      return japaneseCountryNames[country.code];
+    case "ca":
+      return catalanCountryNames[country.code];
     default:
       return country.name;
   }
