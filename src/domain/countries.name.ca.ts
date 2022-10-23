@@ -1,4 +1,4 @@
-// Source: https://co.wikipedia.org/wiki/ISO_3166-2
+// Source: https://ca.wikipedia.org/wiki/ISO_3166-2
 export const catalanCountryNames: Record<string, string> = {
   AD: "República d'Adiguèsia",
   AL: "República de l'Altai",
@@ -12,9 +12,9 @@ export const catalanCountryNames: Record<string, string> = {
   BU: "República de Buriàtia",
   CE: "República de Txetxènia",
   CHE: "Província de Txeliàbinsk",
-  CHU: "Districte autònom de Txukotka",
+  CHU: "Districte Autònom de Txukotka",
   CU: "República de Txuvàixia",
-  DA: "República del Daguestan",
+  DA: "República de Daguestan",
   IN: "República d'Ingúixia",
   IRK: "Província d'Irkutsk",
   IVA: "Província d'Ivànovo",

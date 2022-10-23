@@ -6,6 +6,7 @@
 import { areas } from "./countries.area";
 import { countries } from "./countries.position";
 import { catalanCountryNames } from "./countries.name.ca";
+import { spanishCountryNames } from "./countries.name.es";
 import { countryCodesWithImage } from "./countries.image";
 
 export interface Country {
@@ -28,6 +29,8 @@ export function getCountryName(language: string, country: Country) {
   switch (language) {
     case "ca":
       return catalanCountryNames[country.code];
+    case "es":
+      return spanishCountryNames[country.code];
     default:
       return country.name;
   }
