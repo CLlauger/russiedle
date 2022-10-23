@@ -23,12 +23,12 @@ module.exports = {
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    'prettier/prettier': [
+    'prettier/prettier': 0/*[
       'error',
       {
         'endOfLine': 'auto',
         "trailingComma": "none",
       }
-    ]
+    ]*/
   }
 };

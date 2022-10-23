@@ -19,7 +19,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         <div>
           Guess the <Worldle /> in 6 guesses.
         </div>
-        <div>Each guess must be a valid country, territory, ...</div>
+        <div>Each guess must be a valid oblast, republic, krai...</div>
         <div>
           After each guess, you will have the distance, the direction and the
           proximity from your guess to the target location.
@@ -32,18 +32,18 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Chile",
-                direction: "NE",
-                distance: 13_557_000,
+                name: "PRIMORSKY KRAI",
+                direction: "W",
+                distance: 6_385_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            Your guess <span className="uppercase font-bold">Chile</span> is{" "}
-            {formatDistance(13557000, settingsData.distanceUnit)} away from the
-            target location, the target location is in the North-East direction
-            and you have a only 32% of proximity because it&apos;s quite far
+            Your guess <span className="uppercase font-bold">Primorsky Krai</span> is{" "}
+            {formatDistance(6385000, settingsData.distanceUnit)} away from the
+            target location, the target location is in the West direction
+            and you have only a 68% of proximity because it&apos;s quite far
             away!
           </div>
         </div>
@@ -52,18 +52,18 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Finland",
-                direction: "SE",
-                distance: 3_206_000,
+                name: "CHECHEN REPUBLIC",
+                direction: "NW",
+                distance: 2_072_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
             Your second guess{" "}
-            <span className="uppercase font-bold">Finland</span> is getting
-            closer! {formatDistance(3206000, settingsData.distanceUnit)} away,
-            South-East direction and 84%!
+            <span className="uppercase font-bold">Chechen Republic</span> is getting
+            closer! {formatDistance(2072000, settingsData.distanceUnit)} away,
+            North-West direction and 89%!
           </div>
         </div>
         <div>
@@ -71,7 +71,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Lebanon",
+                name: "LENINGRAD OBLAST",
                 direction: "N",
                 distance: 0,
               },
@@ -79,7 +79,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Next guess, <span className="uppercase font-bold">Lebanon</span>,
+            Next guess, <span className="uppercase font-bold">Leningrad Oblast</span>,
             it&apos;s the location to guess! Congrats!{" "}
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
@@ -89,22 +89,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         A new <Worldle /> will be available every day!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Any question or suggestion?</div>
-        <div>
-          Check the{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Worldle FAQ
-          </a>
-          !
-        </div>
-      </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> has been <span className="font-bold">heavily</span> inspired
+        <Worldle /> is a clone of <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> (with replaced datasets) which has been <span className="font-bold">heavily</span> inspired
         by{" "}
         <a
           className="underline"
@@ -127,7 +112,28 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
-          Made by{" "}
+          <Worldle/> made by{" "}
+          <a
+            className="underline"
+            href="https://github.com/CLlauger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @CLlauger
+          </a>{" "}
+          - (
+          <a
+            className="underline"
+            href="https://github.com/cllauger/russiedle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            source code
+          </a>
+          )
+        </div>
+        <div>
+        <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> made by{" "}
           <a
             className="underline"
             href="https://twitter.com/teuteuf"
@@ -148,7 +154,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           )
         </div>
         <div>
-          Want to support?{" "}
+          Want to support Worldle?{" "}
           <a
             className="underline"
             href="https://www.ko-fi.com/teuteuf"
@@ -156,7 +162,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             <Twemoji
-              text="Buy me a coffee! ☕"
+              text="Buy @teuteuf a coffee! ☕"
               options={{ className: "inline-block" }}
             />
           </a>

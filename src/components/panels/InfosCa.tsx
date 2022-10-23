@@ -12,42 +12,41 @@ interface InfosProps {
   settingsData: SettingsData;
 }
 
-export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
+export function InfosCa({ isOpen, close, settingsData }: InfosProps) {
   return (
-    <Panel title="Cumu ghjucà" isOpen={isOpen} close={close}>
+    <Panel title="Com es juga" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           {" "}
-          Induvinate u <Worldle /> in 6 colpi.
+          Endevineu el <Worldle /> en 6 intents.
         </div>
         <div>
-          Ogni colpu deve esse u nome accettevule d’un paese o d’un territoriu.
+          Cada intent ha de ser un óblast, república, krai... vàlid.
         </div>
         <div>
-          Dopu à ogni colpu, ottinerete a distanza, a direzzione è a vicinanza
-          trà a vostra prova è u paese à induvinà.
+          Després de cada intent, tindràs la distància, la direcció i la
+          proximitat del teu intent cap a l&apos;objectiu.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Esempii</div>
+        <div className="font-bold">Exemples</div>
         <div>
           <Guesses
             rowCount={1}
             guesses={[
               {
-                name: "Cile",
-                direction: "NE",
-                distance: 13_557_000,
+                name: "TERRITORI DE PRIMÓRIE",
+                direction: "W",
+                distance: 6_385_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            U vostru colpu <span className="uppercase font-bold">Cile</span> hè
-            à {formatDistance(13557000, settingsData.distanceUnit)} di u paese à
-            induvinà, quellu paese si trova in direzzione di u nordeste è site
-            solu à 32% di vicinanza perchè u vostru colpu hè quantunque
-            alluntanatu !
+            El teu intent <span className="uppercase font-bold">Territori de Primórie</span> està a{" "}
+            {formatDistance(6385000, settingsData.distanceUnit)} de l&apos;objectiu,
+            que està en direcció Oest i només t&apos;hi has aproximat un 68% perquè està
+            prou lluny!
           </div>
         </div>
         <div>
@@ -55,19 +54,18 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Finlandia",
-                direction: "SE",
+                name: "REPÚBLICA DE TXETXÈNIA",
+                direction: "NW",
                 distance: 3_206_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            U vostru secondu colpu{" "}
-            <span className="uppercase font-bold">Finlandia</span> hè più vicinu
-            ! A risposta si trova à{" "}
-            {formatDistance(3206000, settingsData.distanceUnit)}, ver di u
-            sudeste cù una vicinanza di 84% !
+            El teu segon intent{" "}
+            <span className="uppercase font-bold">República de Txetxènia</span> s&apos;hi està
+            acostant més! A {formatDistance(2072000, settingsData.distanceUnit)}, al Nord-Oest i
+            una proximitat del 89%!
           </div>
         </div>
         <div>
@@ -75,7 +73,7 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Libanu",
+                name: "PROVÍNCIA DE LENINGRAD",
                 direction: "N",
                 distance: 0,
               },
@@ -83,33 +81,18 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            L’ultimu colpu, <span className="uppercase font-bold">Libanu</span>,
-            hè u paese à induvinà ! Bellu colpu !{" "}
+            El següent intent, <span className="uppercase font-bold">Província de Leningrad</span>,
+            és el subjecte federal a endevinar! Enhorabona!{" "}
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        Un novu <Worldle /> hè dispunibule ogni ghjornu !
+        Un nou <Worldle /> està disponible cada dia!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Una dumanda o una sugestione ?</div>
-        <div>
-          Visitate a{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FAQ di Worldle
-          </a>{" "}
-          !
-        </div>
-      </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> hè statu inspiratu{" "}
-        <span className="font-bold">forte forte</span> da{" "}
+        <Worldle /> és un clon del <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> (amb unes altres dades) que s&apos;ha inspirat <span className="font-bold">fortament</span>
+        {" "}en el{" "}
         <a
           className="underline"
           href="https://www.powerlanguage.co.uk/wordle/"
@@ -118,7 +101,7 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
         >
           Wordle
         </a>{" "}
-        creatu da{" "}
+        creat per{" "}
         <a
           className="underline"
           href="https://twitter.com/powerlanguish"
@@ -131,7 +114,28 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
-          Sviluppatu da{" "}
+          <Worldle/> fet per{" "}
+          <a
+            className="underline"
+            href="https://github.com/CLlauger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @CLlauger
+          </a>{" "}
+          - (
+          <a
+            className="underline"
+            href="https://github.com/cllauger/russiedle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            codi font
+          </a>
+          )
+        </div>
+        <div>
+        <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> fet per{" "}
           <a
             className="underline"
             href="https://twitter.com/teuteuf"
@@ -147,12 +151,12 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            codice di fonte
+            codi font
           </a>
           )
         </div>
         <div>
-          Vulete sustenemi ?{" "}
+          Voleu ajudar al Worldle?{" "}
           <a
             className="underline"
             href="https://www.ko-fi.com/teuteuf"
@@ -160,7 +164,7 @@ export function InfosCo({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             <Twemoji
-              text="Rigalatemi d’un caffè ! ☕"
+              text="Compreu a en @teuteuf un cafè! ☕"
               options={{ className: "inline-block" }}
             />
           </a>

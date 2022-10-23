@@ -1,31 +1,17 @@
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Game } from "./components/Game";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Infos } from "./components/panels/Infos";
 import { useTranslation } from "react-i18next";
-import { InfosCo } from "./components/panels/InfosCo";
-import { InfosFr } from "./components/panels/InfosFr";
-import { InfosHu } from "./components/panels/InfosHu";
-import { InfosNl } from "./components/panels/InfosNl";
-import { InfosPl } from "./components/panels/InfosPl";
-import { InfosDe } from "./components/panels/InfosDe";
+import { InfosCa } from "./components/panels/InfosCa";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
 import { Stats } from "./components/panels/Stats";
 import { Twemoji } from "@teuteuf/react-emoji-render";
-import { getDayString, useTodays } from "./hooks/useTodays";
-import { InfosJa } from "./components/panels/InfosJa";
-
-const supportLink: Record<string, string> = {
-  UA: "https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1"
-};
 
 export default function App() {
-  const { t, i18n } = useTranslation();
-
-  const dayString = useMemo(getDayString, []);
-  const [{ country }] = useTodays(dayString);
+  const { i18n } = useTranslation();
 
   const [infoOpen, setInfoOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -43,26 +29,8 @@ export default function App() {
 
   let InfosComponent;
   switch (i18n.resolvedLanguage) {
-    case "co":
-      InfosComponent = InfosCo;
-      break;
-    case "fr":
-      InfosComponent = InfosFr;
-      break;
-    case "hu":
-      InfosComponent = InfosHu;
-      break;
-    case "nl":
-      InfosComponent = InfosNl;
-      break;
-    case "pl":
-      InfosComponent = InfosPl;
-      break;
-    case "de":
-      InfosComponent = InfosDe;
-      break;
-    case "ja":
-      InfosComponent = InfosJa;
+    case "ca":
+      InfosComponent = InfosCa;
       break;
     default:
       InfosComponent = Infos;
