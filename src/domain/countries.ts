@@ -6,6 +6,7 @@
 import { areas } from "./countries.area";
 import { countries } from "./countries.position";
 import { catalanCountryNames } from "./countries.name.ca";
+import { russianCountryNames } from "./countries.name.ru";
 import { spanishCountryNames } from "./countries.name.es";
 import { countryCodesWithImage } from "./countries.image";
 
@@ -31,6 +32,8 @@ export function getCountryName(language: string, country: Country) {
       return catalanCountryNames[country.code];
     case "es":
       return spanishCountryNames[country.code];
+    case "ru":
+      return russianCountryNames[country.code];
     default:
       return country.name;
   }
