@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/russiedle/static/css/main.7f143d6c.css",
+    "main.js": "/russiedle/static/js/main.e3ba3daa.js",
+    "static/js/787.c7f2b3bf.chunk.js": "/russiedle/static/js/787.c7f2b3bf.chunk.js",
+    "service-worker.js": "/russiedle/service-worker.js",
+    "index.html": "/russiedle/index.html",
+    "main.7f143d6c.css.map": "/russiedle/static/css/main.7f143d6c.css.map",
+    "main.e3ba3daa.js.map": "/russiedle/static/js/main.e3ba3daa.js.map",
+    "787.c7f2b3bf.chunk.js.map": "/russiedle/static/js/787.c7f2b3bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f143d6c.css",
+    "static/js/main.e3ba3daa.js"
+  ]
+}
