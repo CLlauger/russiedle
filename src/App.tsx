@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Infos } from "./components/panels/Infos";
 import { useTranslation } from "react-i18next";
 import { InfosCa } from "./components/panels/InfosCa";
+import { InfosEs } from "./components/panels/InfosEs";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
 import { Stats } from "./components/panels/Stats";
@@ -31,6 +32,9 @@ export default function App() {
   switch (i18n.resolvedLanguage) {
     case "ca":
       InfosComponent = InfosCa;
+      break;
+    case "es":
+      InfosComponent = InfosEs;
       break;
     default:
       InfosComponent = Infos;

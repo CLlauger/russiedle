@@ -12,42 +12,41 @@ interface InfosProps {
   settingsData: SettingsData;
 }
 
-export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
+export function InfosEs({ isOpen, close, settingsData }: InfosProps) {
   return (
-    <Panel title="Zasady gry" isOpen={isOpen} close={close}>
+    <Panel title="Cómo se juega" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          Odgadnij <Worldle /> w 6. próbach.
+          {" "}
+          Adivina el <Worldle /> en 6 intentos.
         </div>
         <div>
-          W każdej próbie odgadnięcia musisz podać istniejący kraj, terytorium,
-          ...
+          Cada intento tiene que ser un óblast, república, krai... válido.
         </div>
         <div>
-          Po każdej próbie odgadnięcia zobaczysz informację o odległości,
-          kierunku i bliskości pomiędzy odgadniętym krajem, a krajem docelowym.
+          Después de cada intento, tendrás la distancia, la dirección y la
+          proximidad de tu intento hacia el objetivo.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Przykłady</div>
+        <div className="font-bold">Ejemplos</div>
         <div>
           <Guesses
             rowCount={1}
             guesses={[
               {
-                name: "Chile",
-                direction: "NE",
-                distance: 13_557_000,
+                name: "KRAI DE PRIMORIE",
+                direction: "W",
+                distance: 6_385_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            Twój typ <span className="uppercase font-bold">Chile</span> jest
-            oddalone o {formatDistance(13557000, settingsData.distanceUnit)} od
-            kraju docelowego, a kraj docelowy znajduje się w kierunku
-            północno-wschodnim i masz tylko 32% bliskości, ponieważ kraj
-            docelowy jest dość daleko!
+            Tu intento <span className="uppercase font-bold">Krai de Primorie</span> está a{" "}
+            {formatDistance(6385000, settingsData.distanceUnit)} del objetivo,
+            que está en dirección Oeste y sólo te has aproximado un 68% porque está
+            bastante lejos!
           </div>
         </div>
         <div>
@@ -55,18 +54,18 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Finlandia",
-                direction: "SE",
+                name: "REPÚBLICA DE CHECHENIA",
+                direction: "NW",
                 distance: 3_206_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            Twój drugi typ{" "}
-            <span className="uppercase font-bold">Finlandia</span> jest bliżej!{" "}
-            {formatDistance(3206000, settingsData.distanceUnit)} od kraju
-            docelowego, w kierunku południowo-wschodnim i 84% bliskości!
+            Tu segundo intento{" "}
+            <span className="uppercase font-bold">República de Chechenia</span> se está
+            acercando más! A {formatDistance(2072000, settingsData.distanceUnit)}, al Noroeste y
+            una proximidad del 89%!
           </div>
         </div>
         <div>
@@ -74,7 +73,7 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Liban",
+                name: "ÓBLAST DE LENINGRADO",
                 direction: "N",
                 distance: 0,
               },
@@ -82,33 +81,18 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Kolejny typ, <span className="uppercase font-bold">Liban</span>,
-            jest krajem docelowym! Gratulacje!{" "}
+            El siguiente intento, <span className="uppercase font-bold">Óblast de Leningrado</span>,
+            es el sujeto federal a adivinar! Felicidades!{" "}
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        Nowe <Worldle /> będzie pojawiać się każdego dnia!
+        Un nuevo <Worldle /> está disponible cada día!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Masz pytania lub sugestie?</div>
-        <div>
-          Sprawdź{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Worldle FAQ
-          </a>
-          !
-        </div>
-      </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> wzoruje się w <span className="font-bold">dużej</span>{" "}
-        mierze na{" "}
+        <Worldle /> es un clon del <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> (con otros datos) que se ha inspirado <span className="font-bold">fuertemente</span>
+        {" "}en el{" "}
         <a
           className="underline"
           href="https://www.powerlanguage.co.uk/wordle/"
@@ -117,20 +101,41 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
         >
           Wordle
         </a>{" "}
-        stworzonym przez{" "}
+        creado por{" "}
         <a
           className="underline"
           href="https://twitter.com/powerlanguish"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Josha Wardle (@powerlanguish)
+          Josh Wardle (@powerlanguish)
         </a>
         .
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
-          Autor{" "}
+          <Worldle/> hecho por{" "}
+          <a
+            className="underline"
+            href="https://github.com/CLlauger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @CLlauger
+          </a>{" "}
+          - (
+          <a
+            className="underline"
+            href="https://github.com/cllauger/russiedle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            código fuente
+          </a>
+          )
+        </div>
+        <div>
+        <span className="font-bold">WOR<span className="text-green-600">L</span>DLE</span> hecho por{" "}
           <a
             className="underline"
             href="https://twitter.com/teuteuf"
@@ -146,12 +151,12 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            kod źródłowy
+            código fuente
           </a>
           )
         </div>
         <div>
-          Chcesz mnie wesprzeć?{" "}
+          Quieres ayudar al Worldle?{" "}
           <a
             className="underline"
             href="https://www.ko-fi.com/teuteuf"
@@ -159,7 +164,7 @@ export function InfosPl({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             <Twemoji
-              text="Postaw mi kawę! ☕"
+              text="Cómprale a @teuteuf un café! ☕"
               options={{ className: "inline-block" }}
             />
           </a>

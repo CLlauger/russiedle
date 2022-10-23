@@ -18,7 +18,7 @@ export function InfosCa({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           {" "}
-          Endevineu el <Worldle /> en 6 intents.
+          Endevina el <Worldle /> en 6 intents.
         </div>
         <div>
           Cada intent ha de ser un óblast, república, krai... vàlid.
@@ -156,7 +156,7 @@ export function InfosCa({ isOpen, close, settingsData }: InfosProps) {
           )
         </div>
         <div>
-          Voleu ajudar al Worldle?{" "}
+          Vols ajudar al Worldle?{" "}
           <a
             className="underline"
             href="https://www.ko-fi.com/teuteuf"
@@ -164,7 +164,7 @@ export function InfosCa({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             <Twemoji
-              text="Compreu a en @teuteuf un cafè! ☕"
+              text="Compra a en @teuteuf un cafè! ☕"
               options={{ className: "inline-block" }}
             />
           </a>
